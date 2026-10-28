@@ -1,0 +1,8 @@
+com\campus\events\EventController$EventRequest.class
+com\campus\events\EventController.class
+com\campus\events\RegistrationController$RegistrationRequest.class
+com\campus\events\Event.class
+com\campus\events\EventStore.class
+com\campus\events\Registration.class
+com\campus\events\RegistrationController.class
+com\campus\events\CampusEventApplication.class
