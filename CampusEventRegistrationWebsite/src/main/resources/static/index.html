@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect | Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">C</span> CampusConnect</a>
+    <nav>
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+        <a href="#admin">Organizer</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">YOUR CAMPUS. YOUR COMMUNITY.</p>
+            <h1>Make memories.<br><span>Join the moment.</span></h1>
+            <p class="hero-text">Discover workshops, competitions, and campus celebrations. Find your next event and save your spot.</p>
+            <a class="primary-link" href="#events">Explore events <span>↘</span></a>
+        </div>
+        <div class="hero-art" aria-label="Campus event illustration">
+            <div class="sun"></div>
+            <div class="art-card card-one"><span>✦</span><b>LEARN</b><small>Grow your skills</small></div>
+            <div class="art-card card-two"><span>♫</span><b>CONNECT</b><small>Meet your people</small></div>
+            <div class="art-circle">CAMPUS<br>VIBES</div>
+            <div class="art-ground"></div>
+        </div>
+    </section>
+
+    <section class="section" id="events">
+        <div class="section-heading">
+            <div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Upcoming events</h2></div>
+            <p class="section-note">Choose an event and register in just a few steps.</p>
+        </div>
+        <div id="event-list" class="event-grid">
+            <p class="loading">Loading events…</p>
+        </div>
+    </section>
+
+    <section class="register-section" id="register">
+        <div class="register-intro">
+            <p class="eyebrow">SAVE YOUR SPOT</p>
+            <h2>You're one step<br>away from <span>joining in.</span></h2>
+            <p>Fill in your details to register for a campus event. Make sure your register number is correct.</p>
+            <div class="mini-note"><span>✓</span> Quick and easy registration</div>
+            <div class="mini-note"><span>✓</span> Duplicate registrations are blocked</div>
+        </div>
+        <form id="registration-form" class="form-card">
+            <h3>Student registration</h3>
+            <label for="eventId">Choose event</label>
+            <select id="eventId" name="eventId" required>
+                <option value="">Select an event</option>
+            </select>
+
+            <label for="studentName">Full name</label>
+            <input id="studentName" name="studentName" type="text" placeholder="Enter your full name" required>
+
+            <label for="registerNo">Register number</label>
+            <input id="registerNo" name="registerNo" type="text" placeholder="e.g. 25AI001" required>
+
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+            <button class="primary-button" type="submit">Complete registration <span>→</span></button>
+            <p id="registration-message" class="form-message" role="status"></p>
+        </form>
+    </section>
+
+    <section class="section organizer-section" id="admin">
+        <div class="section-heading">
+            <div><p class="eyebrow">FOR ORGANIZERS</p><h2>Add a new event</h2></div>
+            <p class="section-note">This demo form adds events to the running application.</p>
+        </div>
+        <form id="event-form" class="event-form">
+            <div class="form-field"><label for="eventName">Event name</label><input id="eventName" required placeholder="e.g. Robotics Workshop"></div>
+            <div class="form-field"><label for="eventDate">Event date</label><input id="eventDate" type="date" required></div>
+            <div class="form-field"><label for="venue">Venue</label><input id="venue" required placeholder="e.g. Seminar Hall"></div>
+            <div class="form-field"><label for="capacity">Maximum participants</label><input id="capacity" type="number" min="1" value="50" required></div>
+            <div class="form-field wide"><label for="description">Description</label><input id="description" placeholder="Briefly describe the event"></div>
+            <button class="primary-button" type="submit">Add event <span>+</span></button>
+            <p id="event-message" class="form-message" role="status"></p>
+        </form>
+    </section>
+
+    <section class="section registrations-section">
+        <div class="section-heading">
+            <div><p class="eyebrow">EVENT TEAM</p><h2>Recent registrations</h2></div>
+            <button id="refresh-registrations" class="secondary-button" type="button">Refresh list ↻</button>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Student</th><th>Register number</th><th>Event</th><th>Email</th><th>Registered at</th></tr></thead>
+                <tbody id="registration-list"><tr><td colspan="5" class="empty-cell">Loading registrations…</td></tr></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer><a class="brand" href="#"><span class="brand-icon">C</span> CampusConnect</a><p>Made for campus life · Campus Event Registration System</p></footer>
+<script src="app.js"></script>
+</body>
+</html>
